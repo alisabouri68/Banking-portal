@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/output.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.4/sweetalert2.min.css" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.4/sweetalert2.all.min.js"
+        integrity="sha256-qtyU+b249rw/5PQ1KXGRtxjlgg6hfU2EK50YOlc0n50=" crossorigin="anonymous"></script>
+    <title>cart</title>
+</head>
+
+<body
+    class=" overflow-x-hidden min-h-[1000px] flex bg-[url(../img/5.png)] bg-center bg-cover bg-no-repeat font-family-vazir">
+    <div class="container mx-auto flex  mb-16 justify-center items-start">
+        <div class="rounded-2xl flex flex-col justify-center items-center">
+            <div class="rounded-2xl flex w-80 h-32 border border-white translate-y-20 bg-neutral-900 *: *:w-[50%]">
+                <div class="flex flex-col justify-center items-center">
+                    <div class="text-white flex flex-row-reverse " style="direction: ltr;" id="divnumbedr"></div>
+                    <div class="text-white" id="name-bank"></div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <img class="object-cover" src="assets/img/credit-card-svgrepo-com.svg" alt="" width="100"
+                        height="50" id="img">
+                </div>
+            </div>
+            <div class="rounded-2xl border bg-[#ffffff38] border-white border-t-0 flex flex-col gap-[7px] pt-16"
+                style="box-shadow: 0 0 323px -18px rgba(255, 255, 255, 0.333);">
+                <div class="flex flex-row-reverse justify-center rounded-2xl border mx-10 overflow-hidden items-center mt-10 gap-1.5  bg-white"
+                    id="inp-num-cart">
+                    <input class="bg-white w-14 outline-none px-1.5 py-[10px]" type="number" autocomplete="off"
+                        dir="ltr">
+                    <span class="text-black">-</span>
+                    <input class="bg-white w-14 outline-none px-1.5 py-[10px]" type="number" autocomplete="off"
+                        dir="ltr">
+                    <span class="text-black">-</span>
+                    <input class="bg-white w-14 outline-none px-1.5 py-[10px]" type="number" autocomplete="off"
+                        dir="ltr">
+                    <span class="text-black">-</span>
+                    <input class="bg-white w-14 outline-none px-1.5 py-[10px]" type="number" autocomplete="off"
+                        dir="ltr">
+                    <span class="text-black">-</span>
+                    <input class="bg-white w-14 outline-none px-1.5 py-[10px]" type="number" autocomplete="off"
+                        dir="ltr">
+                </div>
+                <div class="flex justify-center items-center" id="password-two">
+                    <input class="bg-white  pb-1.5  outline-none  rounded-2xl ps-[13px] py-[10px]" max="7"
+                        placeholder="رمز دوم" type="number" autocomplete="off" style="-webkit-text-security: disc;">
+                </div>
+                <div class="flex justify-center items-center" id="cvv2">
+                    <input class="bg-white  pb-1.5  outline-none  rounded-2xl ps-[13px] py-[10px]" max="5"
+                        placeholder=" cvv2" type="number" autocomplete="off" style="-webkit-text-security: disc;">
+                </div>
+                <div class="flex justify-evenly items-center" id="date">
+                    <input class="bg-white w-12 outline-none px-1.5 rounded-2xl ps-[13px] py-[10px]" max="2"
+                        placeholder="ماه" type="number" autocomplete="off" oninput="eateNumber(event)">
+                    <input class="bg-white w-12 outline-none px-1.5 rounded-2xl ps-[13px] py-[10px]" max="2"
+                        placeholder="سال" type="number" autocomplete="off" oninput="eateNumber(event)">
+                </div>
+                <div class="flex flex-col justify-evenly items-center gap-[5px]" id="captcha">
+                    <div
+                        class="text-black w-52 flex flex-row-reverse justify-evenly items-center *:flex *:font-extrabold bg-[url(../img/2.jpg)] bg-cover bg-center bg-no-repeat">
+                    </div>
+                    <button class="text-white border px-2 py-2 rounded-full">
+                        <svg class="text-inherit w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                        </svg>
+
+                    </button>
+                    <input class="bg-white outline-none px-1.5 rounded-2xl ps-[13px] py-[10px]" id="box-captcha"
+                        placeholder="کد تصادفی بالا را وارد کنید" type="text" autocomplete="off">
+                </div>
+                <div class="flex justify-center items-center mb-10" id="btn-submit">
+                    <button class="text-white border bg-stone-900 px-4 py-2 rounded-2xl">
+                        ثبت کارت
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="assets/script/app.js"></script>
+</body>
+
+</html>
